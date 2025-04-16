@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ffdde1, #fcb69f);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+    max-width: 600px;
+    width: 90%;
+    z-index: 2;
+  }
+  
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #ff4da6;
+    margin-bottom: 20px;
+  }
+  
+  .glow {
+    text-shadow: 0 0 5px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6;
+  }
+  
+  .message {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 25px;
+  }
+  
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #ff6a88, #ff99ac);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+    transition: transform 0.3s ease, background 0.5s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff99ac, #ff6a88);
+  }
+  
+  #surprise {
+    margin-top: 30px;
+  }
+  
+  .surprise-text {
+    font-size: 1.4rem;
+    color: #d63384;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ❤️ Floating Hearts */
+  .hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .hearts-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: hearts 20s linear infinite;
+    background-image: url('https://i.ibb.co/gT0CcWF/heart.png');
+    background-size: 40px;
+    background-repeat: repeat;
+    opacity: 0.15;
+  }
+  
+  @keyframes hearts {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+  }
+  
